@@ -11,6 +11,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Injector", "Injector\Injector.vcxproj", "{5A895D27-CD85-4D7D-ABE0-554C174244CB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaBind", "PCSGOLH\lib\luabind-0.9.1\LuaBind.vcxproj", "{E991A506-FB9F-409F-A5AA-5ADBA7830A66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{341AD219-A278-4641-BC43-9309225C4C80} = {341AD219-A278-4641-BC43-9309225C4C80}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua-5.3.5", "PCSGOLH\lib\lua-5.3.5\lua-5.3.5.vcxproj", "{341AD219-A278-4641-BC43-9309225C4C80}"
 EndProject

@@ -29,6 +29,11 @@
     <ClCompile Include="src\weak_ref.cpp" />
     <ClCompile Include="src\wrapper_base.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lua-5.3.5\lua-5.3.5.vcxproj">
+      <Project>{341ad219-a278-4641-bc43-9309225c4c80}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E991A506-FB9F-409F-A5AA-5ADBA7830A66}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
