@@ -14,4 +14,5 @@ namespace Interfaces
 	extern VMTHook vmtClient;
 
 	void initialize(void);
+	void unload(void);
 }

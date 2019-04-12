@@ -36,5 +36,7 @@ namespace Hooks
 
 		if (!pCmd || pCmd->command_number == 0)
 			return false;
+
+		return true;
 	}
 }

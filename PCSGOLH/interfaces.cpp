@@ -33,4 +33,8 @@ namespace Interfaces
 		vmtClient.setup(pClientMode, "client_panorama.dll");
 		vmtClient.hook_index(24, Hooks::CreateMove);
 	}
+	void unload(void) {
+		vmtPanel.unhook_all();
+		vmtClient.unhook_all();
+	}
 }

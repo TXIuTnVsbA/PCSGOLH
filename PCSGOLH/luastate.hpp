@@ -14,4 +14,5 @@ namespace LuaState
 	extern lua_State* pLuaState;
 
 	void initialize(void);
+	void unload(void);
 }

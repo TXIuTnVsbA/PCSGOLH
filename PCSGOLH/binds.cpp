@@ -8,7 +8,7 @@
 #include "cliententitylistwrapper.hpp"
 #include "baseentitywrapper.hpp"
 #include "utilswrapper.hpp"
-
+#include "loader.hpp"
 DrawManagerWrapper drawManagerWrapper;
 CUserCMDWrapper* userCmdWrapper;
 InterfacesWrapper interfacesWrapper;
@@ -104,7 +104,8 @@ namespace Binds
 				.property("Button", &Events::EventMouse::GetButton),
 			luabind::class_<Events::EventKeyboard>("EventMouse")
 				.property("Type", &Events::EventKeyboard::GetType)
-				.property("KeyCode", &Events::EventKeyboard::GetKeyCode)
+				.property("KeyCode", &Events::EventKeyboard::GetKeyCode),
+			luabind::def("exit", &Loader::unload)
 		];
 
 		try

@@ -1,6 +1,10 @@
 #pragma once
-
-#define SCRIPT_DIR "X:\\change\\me\\please\\script.lua"
+#pragma warning( disable : 4244 )
+#pragma warning( disable : 4307 )
+#pragma warning( disable : 4309 ) // warning C4307: '*': integral constant overflow
+#pragma warning( disable : 4244 ) // warning C4244: '=': conversion possible loss of data
+#pragma warning( disable : 4996 ) // stupid json error when you try and stream a file to json so we can use it
+#define SCRIPT_DIR "lua\\main.lua" //C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\lua\ 
 
 // others
 #include "utils.hpp"

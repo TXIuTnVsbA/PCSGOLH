@@ -22,7 +22,6 @@ namespace Loader
 			while (!(hWindow = FindWindowA("Valve001", "Counter-Strike: Global Offensive"))) Sleep(200);
 			Hooks::gWindowProc = (WNDPROC)SetWindowLongPtr(hWindow, GWL_WNDPROC, (LONG_PTR)Hooks::NewWndProc);
 		}
-
 		Logger::append(Logger::kLogType::SUCCESS, "Initializing LuaState...\n");
 		LuaState::initialize();
 
@@ -31,5 +30,11 @@ namespace Loader
 
 		Logger::append(Logger::kLogType::SUCCESS, "Initializing Binds...\n");
 		Binds::initialize();
+	}
+	void unload() {
+		unload_flag = true;
+		if (Hooks::gWindowProc != NULL) {
+			SetWindowLongPtrA(FindWindow("Valve001", NULL), GWL_WNDPROC, (LONG)Hooks::gWindowProc);
+		}
 	}
 }
